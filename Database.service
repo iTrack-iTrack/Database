@@ -3,7 +3,7 @@ Description=Creates backup copies of the database
 After=multi-user.target
 
 [Service]
-ExecStart=/usr/bin/bash /TODO/Database/run.sh /TODO/Database/build
+ExecStart=/usr/bin/bash /srv/Database/run.sh /srv/Database/build
 Type=simple
 
 [Install]
