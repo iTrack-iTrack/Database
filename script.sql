@@ -1,6 +1,6 @@
 CREATE TABLE sensor_data(
-	longitude FLOAT,
-	latitude FLOAT,
+	longitude REAL,
+	latitude REAL,
 	bpm INTEGER,
 	date_time TIMESTAMP NOT NULL,
 	audio_id INTEGER NOT NULL,
