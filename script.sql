@@ -20,8 +20,9 @@ CREATE TABLE sensor_data(
 
 CREATE TABLE audio_data(
 	audio_id INTEGER FOREIGN KEY REFERENCES sensor_data(audio_id),
+    audio_order INTGER NOT NULL AUTOINCREMENT,
 	audio_data INTEGER,
-	PRIMARY KEY(audio_id)
+	PRIMARY KEY(audio_id, audio_order)
 );
 
 CREATE TABLE accelerometer_data(
