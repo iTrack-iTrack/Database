@@ -12,6 +12,7 @@ CREATE TABLE sensor_data(
 	longitude REAL,
 	latitude REAL,
 	bpm INTEGER,
+    blood_oxygen REAL,
 	date_time DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
 	audio_id INTEGER NOT NULL,
     accelerometer_id INTEGER NOT NULL,
