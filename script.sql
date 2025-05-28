@@ -45,7 +45,6 @@ CREATE TABLE audio_data
 	FOREIGN KEY (audio_id) REFERENCES sensor_data(audio_id)
 );
 
--- TODO: and gyro.
 CREATE TABLE accelgyro_data
 (
 	accelgyro_id    INTEGER NOT NULL,
