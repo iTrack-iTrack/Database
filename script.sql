@@ -45,7 +45,7 @@ CREATE TABLE accelgyro_data
 
 	temperature     REAL,
 
-	PRIMARY KEY (accelerometer_id),
+	PRIMARY KEY (accelgyro_id),
 
-	FOREIGN KEY (accelerometer_id) REFERENCES sensor_data(accelerometer_id)
+	FOREIGN KEY (accelgyro_id) REFERENCES sensor_data(accelgyro_id)
 );
