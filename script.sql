@@ -8,7 +8,7 @@ CREATE TABLE users
 	medications   TEXT,
 	health_issues TEXT,
 
-	PRIMARY KEY(user_id)
+	PRIMARY KEY (user_id)
 );
 
 CREATE TABLE sensor_data
