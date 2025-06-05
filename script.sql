@@ -8,7 +8,7 @@ CREATE TABLE users
 	medications   TEXT,
 	health_issues TEXT,
 
-	PRIMARY KEY(user_id)
+	PRIMARY KEY (user_id)
 );
 
 CREATE TABLE sensor_data
@@ -17,7 +17,6 @@ CREATE TABLE sensor_data
 
 	user_id      INTEGER                            NOT NULL,
 
-	audio_id     INTEGER,
 	accelgyro_id INTEGER,
 
 	longitude    REAL,
@@ -27,22 +26,9 @@ CREATE TABLE sensor_data
 
 	blood_oxygen INTEGER,
 
-	PRIMARY KEY (date_time, user_id, audio_id, accelgyro_id),
+	PRIMARY KEY (date_time, user_id, accelgyro_id),
 
 	FOREIGN KEY (user_id) REFERENCES users(user_id)
-);
-
-CREATE TABLE audio_data
-(
-	audio_id    INTEGER              NOT NULL,
-
-	audio_order INTGER AUTOINCREMENT NOT NULL,
-
-	audio_data  INTEGER,
-
-	PRIMARY KEY (audio_id, audio_order),
-
-	FOREIGN KEY (audio_id) REFERENCES sensor_data(audio_id)
 );
 
 CREATE TABLE accelgyro_data
@@ -59,7 +45,7 @@ CREATE TABLE accelgyro_data
 
 	temperature     REAL,
 
-	PRIMARY KEY (accelerometer_id),
+	PRIMARY KEY (accelgyro_id),
 
-	FOREIGN KEY (accelerometer_id) REFERENCES sensor_data(accelerometer_id)
+	FOREIGN KEY (accelgyro_id) REFERENCES sensor_data(accelgyro_id)
 );
