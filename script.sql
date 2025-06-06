@@ -1,6 +1,6 @@
 CREATE TABLE users
 (
-	user_id       INTEGER  NOT NULL,
+	user_id       INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 
 	full_name     TEXT     NOT NULL,
 	date_of_birth DATETIME NOT NULL, 
@@ -8,7 +8,6 @@ CREATE TABLE users
 	medications   TEXT,
 	health_issues TEXT,
 
-	PRIMARY KEY (user_id)
 );
 
 CREATE TABLE sensor_data
