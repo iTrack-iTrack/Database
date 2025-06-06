@@ -4,10 +4,10 @@ CREATE TABLE users
 
 	full_name     TEXT     NOT NULL,
 	date_of_birth DATETIME NOT NULL, 
+	picture       TEXT,
 
 	medications   TEXT,
 	health_issues TEXT,
-
 );
 
 CREATE TABLE sensor_data
