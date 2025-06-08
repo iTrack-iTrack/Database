@@ -2,21 +2,29 @@ CREATE TABLE users
 (
 	user_id       INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 
-	full_name     TEXT    NOT NULL,
-	picture       TEXT,
+	password      TEXT                              NOT NULL,
 
-	contact       TEXT    NOT NULL,
-	date_of_birth DATE    NOT NULL,
-	address       TEXT    NOT NULL,
+	first_name    TEXT                              NOT NULL,
+	last_name     TEXT                              NOT NULL,
 
-	sickness      TEXT
+	date_of_birth DATE                              NOT NULL,
+
+	country       TEXT                              NOT NULL,
+	region        TEXT                              NOT NULL,
+	street        TEXT                              NOT NULL,
+	house_number  TEXT                              NOT NULL,
+	contact       TEXT                              NOT NULL,
+
+	sickness      TEXT                              NOT NULL,
+
+	picture       TEXT
 );
 
 CREATE TABLE sensor_data
 (
-	user_id         INTEGER                            NOT NULL,
+	user_id         INTEGER  NOT NULL,
 
-	date_time       DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+	date_time       DATETIME NOT NULL,
 
 	accelerometer_x REAL,
 	accelerometer_y REAL,
