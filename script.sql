@@ -22,25 +22,20 @@ CREATE TABLE users
 
 CREATE TABLE sensor_data
 (
-	user_id         INTEGER  NOT NULL,
+	user_id      INTEGER  NOT NULL,
 
-	date_time       DATETIME NOT NULL,
+	date_time    DATETIME NOT NULL,
 
-	accelerometer_x REAL,
-	accelerometer_y REAL,
-	accelerometer_z REAL,
+	step         INTEGER,
+	fall         BOOLEAN,
 
-	gyroscope_x     REAL,
-	gyroscope_y     REAL,
-	gyroscope_z     REAL,
+	temperature  REAL,
 
-	temperature     REAL,
+	longitude    REAL,
+	latitude     REAL,
 
-	longitude       REAL,
-	latitude        REAL,
-
-	bpm             INTEGER,
-	blood_oxygen    INTEGER,
+	bpm          INTEGER,
+	blood_oxygen INTEGER,
 
 	PRIMARY KEY (date_time, user_id),
 
